@@ -2,9 +2,10 @@
   "name": "web_shoes_ec",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
+  "type": "module",
   "scripts": {
-    "dev": "nodemon app.js"
+    "dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,8 @@
     "dotenv": "^14.2.0",
     "express": "^4.17.2",
     "helmet": "^5.0.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.1.7",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.15"
   }
