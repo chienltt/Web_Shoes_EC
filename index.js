@@ -6,7 +6,8 @@ import dotenv from "dotenv"
 import bodyParser from "body-parser"
 import connectDb from "./src/connection.js"
 import routerAdmin from "./src/admin/router/router.js"
-import routerProduction from "./src/production/router/router.js"
+import login from "./src/production/routers/loginRouter.js"
+import register from "./src/production/routers/registerRouter.js"
 
 const app = express()
 app.use(helmet())
@@ -30,6 +31,7 @@ const port = process.env.PORT
 //     })
 // })
 app.use("/admin", routerAdmin)
-app.use("/production", routerProduction)
+app.use("/production/login", login)
+app.use("/production/register", register)
 
 app.listen(port, () => console.log(`Server running on port ${port}`))
