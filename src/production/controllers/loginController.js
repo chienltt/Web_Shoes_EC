@@ -26,8 +26,6 @@ export const loginAccount = async (req, res, next) => {
             avatar: user._doc.avatar
         }
 
-        console.log(userRes)
-
         res.status(200).json({
             status_code: 200,
             detail: "Đăng nhập thành công!",

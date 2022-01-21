@@ -11,8 +11,6 @@ export const createAccount = async (req, res, next) => {
             return res.status(500).json({ detail: "Email đã tồn tại!" });
         }
 
-        console.log(newUser)
-
         const account = new RegisterModel(newUser);
         await account.save();
 
